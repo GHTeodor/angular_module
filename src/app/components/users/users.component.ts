@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
-import {UserService} from '../../services/user.service';
-import {IUser} from '../../models/IUser';
+import {UserService} from '../../services';
+import {IUser} from '../../models';
 
 @Component({
   selector: 'app-users',
@@ -15,6 +15,6 @@ export class UsersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe(response => this.users = response);
+    this.userService.getAll().subscribe(response => this.users = response);
   }
 }

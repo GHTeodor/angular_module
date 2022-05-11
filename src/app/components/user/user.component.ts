@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
-import {IUser} from '../../models/IUser';
-import {UserService} from '../../services/user.service';
+import {IUser} from '../../models';
+import {UserService} from '../../services';
 
 @Component({
   selector: 'app-user',
@@ -15,7 +15,7 @@ export class UserComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
     this.activatedRoute.params.subscribe(value =>
-      this.userService.getUser(value['id']).subscribe(data =>
+      this.userService.getById(value['id']).subscribe(data =>
         this.user = data));
   }
 

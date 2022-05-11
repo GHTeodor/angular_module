@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
-import {PostService} from '../../services/post.service';
-import {IPost} from '../../models/IPost';
+import {PostService} from '../../services';
+import {IPost} from '../../models';
 
 @Component({
   selector: 'app-posts',
@@ -15,6 +15,6 @@ export class PostsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.postService.getPosts().subscribe(response => this.posts = response);
+    this.postService.getAll().subscribe(response => this.posts = response);
   }
 }
