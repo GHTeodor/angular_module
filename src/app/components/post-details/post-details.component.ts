@@ -17,7 +17,7 @@ export class PostDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(() => {
       let {state: {data}} = history;
-      this.post = data as IPost_details;
+      this.post = data;
     });
   }
 }

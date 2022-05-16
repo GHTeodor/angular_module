@@ -13,7 +13,7 @@ export class CommentDetailsComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.params.subscribe(() =>
-      this.comment = this.router.getCurrentNavigation()?.extras?.state?.['data'] as IComment_details);
+      this.comment = this.router.getCurrentNavigation()?.extras?.state?.['data']);
   }
 
   ngOnInit(): void {
