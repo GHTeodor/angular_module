@@ -1,0 +1,23 @@
+<ul>
+  <li><b>id: </b> <i>{{user_details?.id}}</i></li>
+  <li><b>name: </b> <i>{{user_details?.name}}</i></li>
+  <li><b>username: </b> <i>{{user_details?.username}}</i></li>
+  <li><b>email: </b> <i>{{user_details?.email}}</i></li>
+  <ul>
+    <li><b>street: </b> <i>{{user_details?.address?.street}}</i></li>
+    <li><b>suite: </b> <i>{{user_details?.address?.suite}}</i></li>
+    <li><b>city: </b> <i>{{user_details?.address?.city}}</i></li>
+    <li><b>zip-code: </b> <i>{{user_details?.address?.zipcode}}</i></li>
+    <ul>
+      <li><b>lat: </b> <i>{{user_details?.address?.geo?.lat}}</i></li>
+      <li><b>lng: </b> <i>{{user_details?.address?.geo?.lng}}</i></li>
+    </ul>
+  </ul>
+  <li><b>phone: </b> <i>{{user_details?.phone}}</i></li>
+  <li><b>website: </b> <i>{{user_details?.website}}</i></li>
+  <ul>
+    <li><b>name: </b> <i>{{user_details?.company?.name}}</i></li>
+    <li><b>catchPhrase: </b> <i>{{user_details?.company?.catchPhrase}}</i></li>
+    <li><b>bs: </b> <i>{{user_details?.company?.bs}}</i></li>
+  </ul>
+</ul>
