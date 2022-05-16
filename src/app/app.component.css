@@ -10,3 +10,7 @@ a {
 hr {
   background-color: violet;
 }
+
+.active {
+  background-color: gold;
+}

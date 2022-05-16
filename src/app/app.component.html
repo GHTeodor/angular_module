@@ -1,7 +1,7 @@
 <div>
-  <a routerLink="users">USERS</a>
-  <a routerLink="posts">POSTS</a>
-  <a routerLink="comments">COMMENTS</a>
+  <a routerLink="users" [routerLinkActive]="['active', '']">USERS</a>
+  <a routerLink="posts" [routerLinkActive]="['active', '']">POSTS</a>
+  <a routerLink="comments" [routerLinkActive]="['active', '']">COMMENTS</a>
 </div>
 <hr>
 <router-outlet></router-outlet>
