@@ -3,6 +3,8 @@
     <app-comment *ngFor="let c of comments" [comment]="c"></app-comment>
   </div>
   <div>
-    <router-outlet></router-outlet>
+    <div class="fix">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

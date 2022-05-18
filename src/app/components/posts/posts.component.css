@@ -9,3 +9,7 @@
 .w55 {
   width: 55%;
 }
+
+.fix {
+  position: fixed;
+}
