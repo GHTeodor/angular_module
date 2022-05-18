@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 import {TodosDataService} from '../../services';
-import {ITodo} from "../../interfaces";
+import {ITodo} from '../../interfaces';
 
 @Component({
   selector: 'app-todos',
