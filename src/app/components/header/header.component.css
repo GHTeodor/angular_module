@@ -1,0 +1,12 @@
+a {
+  font-weight: bold;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: blueviolet double thin;
+  text-decoration: none;
+  color: darkviolet;
+}
+
+.active {
+  color: deeppink;
+}
