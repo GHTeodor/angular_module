@@ -1,3 +1,11 @@
 .container {
   display: flex;
 }
+
+.w45 {
+  width: 45%;
+}
+
+.w55 {
+  width: 55%;
+}
