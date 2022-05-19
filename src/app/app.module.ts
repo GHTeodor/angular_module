@@ -3,7 +3,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {HeaderComponent} from './components';
+import {HeaderComponent} from './components/header/header.component';
 
 @NgModule({
   declarations: [

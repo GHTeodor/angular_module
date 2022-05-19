@@ -3,8 +3,10 @@ import {CommonModule} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 
 import {UsersRoutingModule} from './users-routing.module';
-import {UsersDataService} from '../../services';
-import {UsersComponent, UserComponent, UserDetailsComponent} from '../../components';
+import {UsersDataService} from './services/users-data.service';
+import {UsersComponent} from './components/users/users.component';
+import {UserComponent} from './components/user/user.component';
+import {UserDetailsComponent} from './components/user-details/user-details.component';
 
 
 @NgModule({
