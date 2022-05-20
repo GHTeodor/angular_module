@@ -1,4 +1,4 @@
-<div>
+<div routerLinkActive="active">
   {{comment.id}} -
-  <button (click)="navigateMe(comment)">{{comment.name}}</button>
+  <a routerLink="/comments/{{comment.id}}">{{comment.name}}</a>
 </div>

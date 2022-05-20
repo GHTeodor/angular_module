@@ -1,1 +1,6 @@
-<app-todo *ngFor="let t of todos" [todo]="t"></app-todo>
+<div class="container">
+  <div>
+    <app-todo *ngFor="let t of todos" [todo]="t"></app-todo>
+  </div>
+  <router-outlet></router-outlet>
+</div>

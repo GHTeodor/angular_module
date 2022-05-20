@@ -1,6 +1,9 @@
 export interface ITodo {
-  userId: number,
   id: number,
   title: string,
+}
+
+export interface ITodo_details extends ITodo {
+  userId: number,
   completed: boolean
 }

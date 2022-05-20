@@ -1,6 +1,4 @@
-<ul>
-  <li><b>id: </b><i>{{todo.id}}</i></li>
-  <li><b>userId: </b><i>{{todo.userId}}</i></li>
-  <li><b>title: </b><i>{{todo.title}}</i></li>
-  <li><b>completed: </b><i>{{todo.completed}}</i></li>
-</ul>
+<div routerLinkActive="active">
+  {{todo.id}} --
+  <a routerLink="/todos/{{todo.id}}">{{todo.title}}</a>
+</div>

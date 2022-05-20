@@ -3,14 +3,16 @@ import {CommonModule} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 
 import {TodosRoutingModule} from './todos-routing.module';
-import {TodosDataService} from './services/todos-data.service';
+import {TodosDataService, TodosResolver, TodoResolver} from './services';
 import {TodosComponent} from './components/todos/todos.component';
 import {TodoComponent} from './components/todo/todo.component';
+import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
 
 @NgModule({
   declarations: [
     TodosComponent,
-    TodoComponent
+    TodoComponent,
+    TodoDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,9 @@ import {TodoComponent} from './components/todo/todo.component';
     HttpClientModule
   ],
   providers: [
-    TodosDataService
+    TodosDataService,
+    TodosResolver,
+    TodoResolver
   ]
 })
 export class TodosModule {

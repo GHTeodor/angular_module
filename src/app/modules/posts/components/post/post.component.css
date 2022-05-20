@@ -1,9 +1,12 @@
-div > button {
-  background-color: transparent;
-  border: none;
+div > a {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-div > button:hover {
+div > a:hover {
   color: red;
+}
+
+.active {
+  border-radius: 8px;
+  background-color: lightgray;
 }

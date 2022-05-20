@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-import {ITodo} from '../../interfaces/todo.interface';
+import {ITodo} from '../../interfaces';
 
 @Component({
   selector: 'app-todo',

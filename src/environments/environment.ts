@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API_1: 'https://jsonplaceholder.typicode.com',
+  API_2: 'http://91.201.233.14/api/v2'
 };
 
 /*

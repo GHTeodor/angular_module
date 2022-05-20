@@ -1,4 +1,12 @@
-ul {
-  border-left: tomato thin solid;
-  border-bottom: tomato thin solid;
+div > a {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+div > a:hover {
+  color: red;
+}
+
+.active {
+  border-radius: 8px;
+  background-color: lightgray;
 }

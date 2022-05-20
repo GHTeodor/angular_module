@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
-import {ITodo} from '../../interfaces/todo.interface';
-import {TodosDataService} from '../../services/todos-data.service';
+import {ITodo} from '../../interfaces';
 
 @Component({
   selector: 'app-todos',
@@ -11,11 +11,11 @@ import {TodosDataService} from '../../services/todos-data.service';
 export class TodosComponent implements OnInit {
   todos: ITodo[];
 
-  constructor(private todosService: TodosDataService) {
+  constructor(private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.todosService.getAll().subscribe(value =>
-      this.todos = value);
+    this.activatedRoute.data.subscribe(({todosData}) =>
+      this.todos = todosData);
   }
 }

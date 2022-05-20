@@ -1,4 +1,4 @@
-<div>
+<div routerLinkActive="active">
   {{post.id}} -
-  <button (click)="navigateMe(post)">{{post.title}}</button>
+  <a routerLink="/posts/{{post.id}}">{{post.title}}</a>
 </div>
