@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="createCar()">
+  <div><label>model: <input type="text" formControlName="model"></label></div>
+  <div><label>price: <input type="number" formControlName="price"></label></div>
+  <div><label>year: <input type="number" formControlName="year"></label></div>
+  <button>Create car</button>
+</form>
+
+<app-car *ngFor="let c of cars" [car]="c"></app-car>
