@@ -1,0 +1,29 @@
+<p>{{user.id}}. {{user.name}}</p>
+<button (click)="emitt()">Details</button>
+<button (click)="saveToStorage()">saveToStorage</button>
+
+<div *ngIf="details">{{
+  <ul>
+    <li><b>id: </b> <i>{{details.id}}</i></li>
+    <li><b>name: </b> <i>{{details.name}}</i></li>
+    <li><b>username: </b> <i>{{details.username}}</i></li>
+    <li><b>email: </b> <i>{{details.email}}</i></li>
+    <ul>
+      <li><b>street: </b> <i>{{details.address.street}}</i></li>
+      <li><b>suite: </b> <i>{{details.address.suite}}</i></li>
+      <li><b>city: </b> <i>{{details.address.city}}</i></li>
+      <li><b>zip-code: </b> <i>{{details.address.zipcode}}</i></li>
+      <ul>
+        <li><b>lat: </b> <i>{{details.address.geo.lat}}</i></li>
+        <li><b>lng: </b> <i>{{details.address.geo.lng}}</i></li>
+      </ul>
+    </ul>
+    <li><b>phone: </b> <i>{{details.phone}}</i></li>
+    <li><b>website: </b> <i>{{details.website}}</i></li>
+    <ul>
+      <li><b>name: </b> <i>{{details.company.name}}</i></li>
+      <li><b>catchPhrase: </b> <i>{{details.company.catchPhrase}}</i></li>
+      <li><b>bs: </b> <i>{{details.company.bs}}</i></li>
+    </ul>
+  </ul>
+  }}</div>
