@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, ValidationErrors, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 
@@ -31,9 +31,10 @@ export class RegisterComponent implements OnInit {
   register(): void {
     const rawValue = this.form.getRawValue();
     delete rawValue.confirmPassword;
-    this.authService.register(rawValue).subscribe(
-      () => this.router.navigate(['login']),
-      err => this.userNameError = err.error.username[0]);
+    this.authService.register(rawValue).subscribe({
+      next: () => this.router.navigate(['login']),
+      error: err => this.userNameError = err.error.username[0]
+    });
   }
 
   _checkPasswords(form: AbstractControl): ValidationErrors | null {

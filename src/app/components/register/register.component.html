@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="register()">
   <div><label>username: <input type="text" formControlName="username"></label>
-  <span *ngIf="userNameError">{{userNameError}}</span></div>
+    <span *ngIf="userNameError">{{userNameError}}</span></div>
   <div><label>password: <input type="text" formControlName="password"></label></div>
   <div><label>confirmPassword: <input type="text" formControlName="confirmPassword"></label>
     <span *ngIf="form.errors">{{form.errors['notSame']}}</span></div>

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
@@ -19,10 +19,6 @@ export class CarService {
 
   getAll(): Observable<ICar[]> {
     return this.httpClient.get<ICar[]>(urls.cars);
-  }
-
-  getById(id: number): Observable<ICar> {
-    return this.httpClient.get<ICar>(`${urls.cars}/${id}`);
   }
 
   deleteById(id: number): Observable<void> {

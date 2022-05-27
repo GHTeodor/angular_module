@@ -2,8 +2,16 @@
   <div><label>model: <input type="text" formControlName="model"></label></div>
   <div><label>price: <input type="number" formControlName="price"></label></div>
   <div><label>year: <input type="number" formControlName="year"></label></div>
-  <button>Create car</button>
+  <button>{{!carForUpdate ? 'save' : 'update'}}</button>
 </form>
 
-<app-car *ngFor="let c of cars" [car]="c"></app-car>
-<router-outlet></router-outlet>
+<div *ngFor="let car of cars">
+  <ul>
+    <li><b>id: </b><i>{{car.id}}</i></li>
+    <li><b>model: </b><i>{{car.model}}</i></li>
+    <li><b>year: </b><i>{{car.year}}</i></li>
+    <li><b>price: </b><i>{{car.price}}</i></li>
+    <button (click)="deleteCar(car.id)">X</button>
+    <button (click)="updateCar(car)">Update</button>
+  </ul>
+</div>
