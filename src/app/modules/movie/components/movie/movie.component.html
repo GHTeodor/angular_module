@@ -1,0 +1,42 @@
+<div class="container">
+  <div>
+    <div class="top">
+      <div class="top-2">
+
+        <div id="img" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w500'+movie.poster_path+')'}">
+          <div *ngFor="let genre of movie.genres" [ngStyle]="{'height': 'calc(100% / '+movie.genres.length+')'}">
+            <button (click)="goGenre(genre.id)">{{genre.name}}</button>
+          </div>
+        </div>
+
+        <div class="top-right">
+          <h1>{{movie.title}}</h1>
+          <p>{{movie.overview}}</p>
+          <br>
+          <hr>
+          <small>Popularity: {{movie.popularity}}</small><br>
+          <small>Release Date: {{movie.release_date}}</small><br>
+          <small>Budget: {{movie.budget}}</small><br>
+          <small>Revenue: {{movie.revenue}}</small><br>
+          <small>Runtime: {{movie.runtime}}</small><br>
+          <small>Votes: {{movie.vote_count}}</small><br>
+
+          <app-star [rating]="movie.vote_average" [votes]="movie.vote_count"></app-star>
+
+          <div id="carousel-container" *ngIf="image.length">
+            <app-images *ngFor="let img of image" [image]="img"></app-images>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src="https://image.tmdb.org/t/p/original{{movie.backdrop_path}}" alt="{{movie.original_title}}">
+
+    <app-youtube-video *ngIf="video?.key" [video]="video"></app-youtube-video>
+
+    <br>
+    <a href="{{movie.homepage}}">Visit website</a>
+
+    <button class="scrollUp" (click)="scrollTop()">↑</button>
+  </div>
+</div>

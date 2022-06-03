@@ -1,0 +1,37 @@
+.results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  padding-left: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a > h1:hover {
+  transition-duration: .5s;
+  padding-left: 5px;
+  transform: scale(.9);
+}
+
+h1 {
+  background: -webkit-linear-gradient(45deg, rebeccapurple, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .results {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  img {
+    max-width: 96vw;
+  }
+}

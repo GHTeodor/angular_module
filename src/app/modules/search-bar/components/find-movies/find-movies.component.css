@@ -1,0 +1,33 @@
+.btn {
+  background-image: linear-gradient(to right, #00c3ff 0%, #ffff1c 51%, #00c3ff 100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-transform: uppercase;
+  background-size: 200% auto;
+  border-radius: 10px;
+  cursor: grab;
+}
+
+.btn:active {
+  cursor: grabbing;
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
+
+.scrollUp {
+  opacity: .7;
+  position: fixed;
+  right: 15px;
+  bottom: 25px;
+  border-radius: 45%;
+  height: 3rem;
+  width: 3rem;
+  cursor: grab;
+}
+
+.scrollUp:hover {
+  opacity: 1;
+  cursor: grabbing;
+}

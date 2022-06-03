@@ -1,0 +1,22 @@
+div {
+  background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 9px 3px gray;
+  padding: 5px 0;
+}
+
+a {
+  font-weight: bold;
+  font-size: x-large;
+  padding-left: 10px;
+  border-left: violet double thin;
+  text-decoration: none;
+  color: white;
+}
+
+.active {
+  color: deeppink;
+}

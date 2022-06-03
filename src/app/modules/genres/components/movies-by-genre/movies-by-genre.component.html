@@ -1,0 +1,15 @@
+<app-page [results]="movieByGenre?.total_results" [page]="page" [maxPage]="maxPage"
+          (pageEmitter)="catchPageEmitter($event)"></app-page>
+<hr>
+
+<div class="moviesByGenre">
+  <div *ngFor="let film of movieByGenre?.results">
+    <a [routerLink]="['/movie/' + film.id]">
+      <img *ngIf="film.poster_path" src="https://image.tmdb.org/t/p/w500{{film.poster_path}}" alt="{{film.title}}"></a>
+    <a [routerLink]="['/movie/' + film.id]"><h1>{{film.title}}</h1></a>
+    <small>{{film.release_date}}</small>
+    <p>{{film.overview}}</p>
+  </div>
+
+  <button class="scrollUp" (click)="scrollTop()">↑</button>
+</div>

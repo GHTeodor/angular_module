@@ -1,0 +1,5 @@
+@media screen and (max-width: 590px) {
+  img {
+    max-width: 90vw;
+  }
+}

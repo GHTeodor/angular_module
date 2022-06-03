@@ -1,0 +1,19 @@
+footer {
+  background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);
+  text-align: end;
+}
+
+app-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-height {
+  height: 80px;
+}
+
+.isDark {
+  background-color: #00c3ff;
+  color: #ffff1c;
+}

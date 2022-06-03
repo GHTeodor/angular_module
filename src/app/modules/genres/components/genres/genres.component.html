@@ -1,0 +1,7 @@
+<div class="genres">
+  <button *ngFor="let genre of genres"
+          (click)="goGenre(genre.id)">{{genre.name}}</button>
+</div>
+
+<hr>
+<app-movies-by-genre></app-movies-by-genre>

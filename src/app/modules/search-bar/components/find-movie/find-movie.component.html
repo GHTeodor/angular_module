@@ -1,0 +1,18 @@
+<hr>
+<div class="results">
+  <div class="info">
+    <a [routerLink]="['/movie/'+ film?.id]">
+      <h1>{{film?.title}}</h1>
+    </a>
+    <p>{{film?.overview}}</p>
+    <small><b>popularity:</b> {{film?.popularity}}</small> <br>
+    <small><b>release_date:</b> {{film?.release_date}}</small> <br>
+    <small><b>vote_average:</b> {{film?.vote_average}}</small> <br>
+    <small><b>vote_count:</b> {{film?.vote_count}}</small> <br>
+  </div>
+  <div *ngIf="film?.backdrop_path">
+    <a [routerLink]="['/movie/'+ film?.id]">
+      <img src="https://image.tmdb.org/t/p/w500{{film?.backdrop_path}}" alt="{{film?.title}}">
+    </a>
+  </div>
+</div>

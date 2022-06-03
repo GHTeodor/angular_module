@@ -1,0 +1,13 @@
+button {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+button:hover {
+  cursor: grab;
+  background-color: #ffff1c;
+}
+button:active {
+  cursor: grabbing;
+}

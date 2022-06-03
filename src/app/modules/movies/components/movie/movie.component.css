@@ -1,0 +1,22 @@
+div {
+  border: linen solid thin;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a > h1:hover {
+  background: -webkit-linear-gradient(45deg, green, blueviolet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 576px) {
+  img {
+    max-width: 96vw;
+  }
+}

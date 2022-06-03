@@ -1,0 +1,33 @@
+div {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  margin: 0 auto;
+
+  border: rebeccapurple double thick;
+  border-radius: 10px;
+}
+
+button {
+  cursor: grab;
+  padding: 5px 25px;
+  border-radius: 8px;
+}
+
+button:active {
+  cursor: grabbing;
+}
+
+input {
+  height: 1.5rem;
+  background-color: transparent;
+  width: 170px;
+  transition: .3s linear;
+}
+
+input:focus {
+  width: 220px;
+}

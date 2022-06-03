@@ -1,0 +1,25 @@
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.movie {
+  width: 500px;
+}
+
+button {
+  cursor: grab;
+  opacity: .7;
+  position: fixed;
+  right: 15px;
+  bottom: 25px;
+  border-radius: 45%;
+  height: 3rem;
+  width: 3rem;
+}
+
+button:hover {
+  cursor: grabbing;
+  opacity: 1;
+}

@@ -1,0 +1,7 @@
+<app-page [page]="page" (pageEmitter)="catchPageEmitter($event)"></app-page>
+
+
+<div class="movies" >
+  <app-movie *ngFor="let m of movies" [movie]="m" class="movie"></app-movie>
+</div>
+<button (click)="scrollTop()">↑</button>
