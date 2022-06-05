@@ -11,3 +11,8 @@ button:hover {
 button:active {
   cursor: grabbing;
 }
+
+.isDark {
+  background-color: darkslategray;
+  color: honeydew;
+}

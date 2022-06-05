@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 import {GenreService} from '../../services';
 import {GetByGenreStorageService} from '../../../../storageService';
@@ -15,6 +15,12 @@ export class MoviesByGenreComponent implements OnInit {
   movieByGenre: IMoviesByGenre;
 
   constructor(private genreService: GenreService, private getByGenreService: GetByGenreStorageService) {
+  }
+
+  @HostListener('window:scroll')
+  showButtonScrollUp() {
+    const btn_scrollUp = document.getElementsByClassName("scrollUp")[0] as HTMLElement;
+    btn_scrollUp.style.visibility = window.pageYOffset < 500 ? "hidden" : 'visible';
   }
 
   ngOnInit(): void {

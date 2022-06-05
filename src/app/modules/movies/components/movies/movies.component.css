@@ -23,3 +23,7 @@ button:hover {
   cursor: grabbing;
   opacity: 1;
 }
+
+#btnScrollUp {
+  visibility: hidden;
+}

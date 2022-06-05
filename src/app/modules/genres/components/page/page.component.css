@@ -31,3 +31,8 @@ input {
 input:focus {
   width: 220px;
 }
+
+.isDark {
+  background-color: darkslategray;
+  color: honeydew;
+}

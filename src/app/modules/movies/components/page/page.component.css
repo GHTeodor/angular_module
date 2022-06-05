@@ -38,6 +38,7 @@ input:focus {
   width: 220px;
 }
 
-.isDark button {
-
+.isDark {
+  background-color: darkslategray;
+  color: honeydew;
 }

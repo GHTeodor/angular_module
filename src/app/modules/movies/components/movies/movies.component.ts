@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
 import {IMovie} from '../../interfaces';
@@ -13,6 +13,12 @@ export class MoviesComponent implements OnInit {
   page: number;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  }
+
+  @HostListener('window:scroll')
+  showButtonScrollUp() {
+    const btn_scrollUp = document.getElementById("btnScrollUp") as HTMLElement;
+    btn_scrollUp.style.visibility = window.pageYOffset < 500 ? "hidden" : 'visible';
   }
 
   ngOnInit(): void {

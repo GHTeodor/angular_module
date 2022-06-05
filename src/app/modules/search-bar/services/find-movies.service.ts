@@ -9,7 +9,6 @@ import {IFoundMovies} from '../interfaces';
   providedIn: 'root'
 })
 export class FindMoviesService {
-
   constructor(private httpClient: HttpClient) {
   }
 

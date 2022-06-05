@@ -19,6 +19,7 @@ img {
   height: 3rem;
   width: 3rem;
   cursor: grab;
+  visibility: hidden;
 }
 
 .scrollUp:hover {

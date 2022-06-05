@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 
 import {IGenre} from '../../interfaces';
 import {GetByGenreStorageService} from '../../../../storageService';
+import {DarkModeService} from '../../../../storageService';
 
 @Component({
   selector: 'app-genres',
@@ -11,11 +12,18 @@ import {GetByGenreStorageService} from '../../../../storageService';
 })
 export class GenresComponent implements OnInit {
   genres: IGenre[];
+  isDark: boolean;
 
-  constructor(private activatedRoute: ActivatedRoute, private getByGenreService: GetByGenreStorageService) {
+  constructor(private activatedRoute: ActivatedRoute,
+              private getByGenreService: GetByGenreStorageService,
+              private darkModeService: DarkModeService) {
   }
 
   ngOnInit(): void {
+    this.darkModeService.isDark.subscribe(value => {
+      this.isDark = value;
+    });
+
     this.activatedRoute.data.subscribe(({genresData: {genres}}) =>
       this.genres = genres);
   }

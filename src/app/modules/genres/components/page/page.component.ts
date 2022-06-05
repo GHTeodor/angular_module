@@ -1,6 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
+import {DarkModeService} from '../../../../storageService';
+
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
@@ -17,18 +19,22 @@ export class PageComponent implements OnInit {
   @Output()
   pageEmitter = new EventEmitter<number>();
 
+  isDark: boolean;
   form: FormGroup;
 
-  constructor() {
+  constructor(private darkModeService: DarkModeService) {
     this._createForm();
   }
 
   ngOnInit(): void {
+    this.darkModeService.isDark.subscribe(value => {
+      this.isDark = value;
+    });
   }
 
   _createForm(): void {
     this.form = new FormGroup({
-      page: new FormControl(null, [Validators.required, Validators.min(1), Validators.max(this.maxPage)]),
+      page: new FormControl(null, [Validators.required, Validators.min(1), Validators.max(500)]),
     });
   }
 

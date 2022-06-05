@@ -1,11 +1,14 @@
 <div class="page">
-  <button [disabled]="page===1" (click)="prevPage()"><</button>
+  <button [disabled]="page===1" (click)="prevPage()"
+  [ngClass]="isDark ? 'isDark' : ''"><</button>
   <b> Page № <u>{{page}}</u> </b>
-  <button [disabled]="page===500" (click)="nextPage()">></button>
+  <button [disabled]="page===500" (click)="nextPage()"
+  [ngClass]="isDark ? 'isDark' : ''">></button>
 
   <form [formGroup]="form">
     <input type="number" placeholder="1-500" formControlName="page">
-    <button [disabled]="form.invalid" (click)="changePage()">Go to page: {{form.value['page']}}</button>
+    <button [disabled]="form.invalid" (click)="changePage()"
+    [ngClass]="isDark ? 'isDark' : ''">Go to page: {{form.value['page']}}</button>
   </form>
 </div>
 <hr>

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 import {SearchStorageService} from '../../../../storageService';
 import {FindMoviesService} from '../../services'
@@ -16,6 +16,12 @@ export class FindMoviesComponent implements OnInit {
 
   constructor(private searchStorageService: SearchStorageService,
               private findMoviesService: FindMoviesService) {
+  }
+
+  @HostListener('window:scroll')
+  showButtonScrollUp() {
+    const btn_scrollUp = document.getElementsByClassName("scrollUp")[0] as HTMLElement;
+    btn_scrollUp.style.visibility = window.pageYOffset < 500 ? "hidden" : 'visible';
   }
 
   ngOnInit(): void {

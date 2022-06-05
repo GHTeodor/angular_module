@@ -1,12 +1,15 @@
 <div>
-  <button [disabled]="page === 1" (click)="prevPage()">{{page - 1}}<</button>
+  <button [disabled]="page === 1" (click)="prevPage()"
+  [ngClass]="isDark ? 'isDark' : ''">{{page - 1}}<</button>
   <mark>{{results}} result(s)</mark>
 
 
   <form [formGroup]="form">
     <input type="number" placeholder="1-{{maxPage}}" formControlName="page">
-    <button [disabled]="form.invalid" (click)="changePage()">Go to page: {{form.value['page']}}</button>
+    <button [disabled]="form.invalid || form.getRawValue().page > maxPage" (click)="changePage()"
+    [ngClass]="isDark ? 'isDark' : ''">Go to page: {{form.value['page']}}</button>
   </form>
 
-  <button [disabled]="page===maxPage || maxPage===0" (click)="nextPage()">>{{page + 1}}</button>
+  <button [disabled]="page===maxPage || maxPage===0" (click)="nextPage()"
+  [ngClass]="isDark ? 'isDark' : ''">>{{page + 1}}</button>
 </div>

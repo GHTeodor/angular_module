@@ -1,6 +1,7 @@
 <div class="genres">
   <button *ngFor="let genre of genres"
-          (click)="goGenre(genre.id)">{{genre.name}}</button>
+          (click)="goGenre(genre.id)"
+          [ngClass]="isDark ? 'isDark' : ''">{{genre.name}}"</button>
 </div>
 
 <hr>

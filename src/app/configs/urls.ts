@@ -1,5 +1,5 @@
 import {environment} from '../../environments/environment';
-import {IUrls} from "./urls.interface";
+import {IUrls} from './urls.interface';
 
 const {baseURL, apiKey, UA} = environment;
 
