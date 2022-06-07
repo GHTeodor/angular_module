@@ -21,7 +21,6 @@ export class MainInterceptor implements HttpInterceptor {
   addApiKey(request: HttpRequest<any>) {
     return request.clone({
       url: request.url.replace('?api_key', apiKey).replace('/uk-UA', UA)
-
     });
   }
 }
