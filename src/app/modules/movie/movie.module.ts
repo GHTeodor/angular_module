@@ -5,7 +5,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 
 import {MovieRoutingModule} from './movie-routing.module';
 import {MovieComponent} from './components/movie/movie.component';
-import {MovieGuard, MovieResolver, MovieService, YouTubeResolver, ImagesResolver} from './services';
+import {MovieResolver, MovieService, YouTubeResolver, ImagesResolver} from './services';
 import {YoutubeVideoComponent} from './components/youtube-video/youtube-video.component';
 import {ImagesComponent} from './components/image/images.component';
 import {StarComponent} from './components/star/star.component';
@@ -29,7 +29,6 @@ import {StarComponent} from './components/star/star.component';
     MovieResolver,
     YouTubeResolver,
     ImagesResolver,
-    MovieGuard
   ],
 })
 export class MovieModule {

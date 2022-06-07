@@ -13,6 +13,6 @@ export class FindMoviesService {
   }
 
   getAll(page: number, query: string | null): Observable<IFoundMovies> {
-    return this.httpClient.get<IFoundMovies>(`${urls.query}${query}&page=${page}`);
+    return this.httpClient.get<IFoundMovies>(`${urls.query}&query=${query}&page=${page}`);
   }
 }

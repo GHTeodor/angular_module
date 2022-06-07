@@ -5,11 +5,7 @@ import {GenresResolver} from './services';
 import {GenresComponent} from './components/genres/genres.component';
 
 const routes: Routes = [
-  {
-    path: '', component: GenresComponent, resolve: {genresData: GenresResolver}
-    // canActivate: [GenresGuard],
-    // canDeactivate: [GenresGuard]
-  }
+  {path: '', component: GenresComponent, resolve: {genresData: GenresResolver}}
 ];
 
 @NgModule({
