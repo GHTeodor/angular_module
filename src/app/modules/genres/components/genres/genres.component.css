@@ -16,3 +16,15 @@ button:active {
   background-color: darkslategray;
   color: honeydew;
 }
+
+@media screen and (max-width: 578px) {
+  .genres {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .genres {
+    margin-top: 60px;
+  }
+}
